@@ -1,39 +1,20 @@
-﻿# Dependencias JavaScript
 **/node_modules/
-
-# Front-end: Expo / React Native
-front/.expo/
-front/dist/
-front/web-build/
-front/expo-env.d.ts
-front/.env
-front/.env.*
-!front/.env.example
-front/ios/
-front/android/
-front/.kotlin/
-front/.metro-health-check*
-front/npm-debug.*
-front/yarn-debug.*
-front/yarn-error.*
-front/*.orig.*
-front/*.jks
-front/*.p8
-front/*.p12
-front/*.key
-front/*.mobileprovision
-front/*.pem
-front/*.tsbuildinfo
-
-# Back-end: Spring Boot / Maven
 **/target/
-back/data/
-back/*.log
-
-# Arquivos locais e IDE
-.env
-.env*.local
-.DS_Store
-.idea/
-.vscode/
-*.iml
+**/.expo/
+**/dist/
+**/web-build/
+**/expo-env.d.ts
+**/.env
+**/.env.*
+!**/.env.example
+**/data/
+**/*.log
+**/.DS_Store
+**/.idea/
+**/.vscode/
+**/*.iml
+**/*.tsbuildinfo
+**/ios/
+**/android/
+**/.kotlin/
+**/.metro-health-check*

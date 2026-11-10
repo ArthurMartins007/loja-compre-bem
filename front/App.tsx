@@ -2,11 +2,13 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import TelaDetalheProduto from './src/screen/TelaDetalheProduto';
+import TelaFormularioProduto from './src/screen/TelaFormularioProduto';
 import TelaListaProdutos from './src/screen/TelaListaProdutos';
 
 export type RootStackParamList = {
   TelaListaProdutos: undefined;
   TelaDetalheProduto: { produtoId: string };
+  TelaFormularioProduto: { produtoId?: string };
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -25,6 +27,11 @@ export default function App() {
             name="TelaDetalheProduto"
             component={TelaDetalheProduto}
             options={{ title: 'Detalhes do Produto' }}
+          />
+          <Stack.Screen
+            name="TelaFormularioProduto"
+            component={TelaFormularioProduto}
+            options={({ route }) => ({ title: route.params.produtoId ? 'Editar Produto' : 'Cadastrar Produto' })}
           />
         </Stack.Navigator>
       </NavigationContainer>

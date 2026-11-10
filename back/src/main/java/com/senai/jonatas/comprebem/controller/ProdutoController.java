@@ -49,7 +49,7 @@ public class ProdutoController {
     }
 
     @PutMapping("/{produtoId}")
-    public ProdutoResponseDTO update(@PathVariable UUID produtoId, @Valid @RequestBody ProdutoRequestDTO produto) {
+    public ProdutoResponseDTO update(@PathVariable("produtoId") UUID produtoId, @Valid @RequestBody ProdutoRequestDTO produto) {
         return produtoService.update(produtoId, produto);
     }
 
